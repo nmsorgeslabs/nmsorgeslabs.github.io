@@ -8,16 +8,16 @@
     <h2> Some ideas, fun and programming </h2>
   </div>
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <h3>Team members</h3>
       <p>Just me</p>
 
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <h3>Latest commits</h3>
       <p>TODO</p>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <h3>Latest news</h3>        
       <p> Adding first ever Angular code to this page! </p>
       <p> Just updated this page with Bootstrap simple template!</p>
@@ -29,9 +29,12 @@
 	    <p>All projets in NMS org es Labs</p> 
 	
 	</div>
-	<div  ng-repeat="project in projectsList" class="col-sm-4">
-      <h3><a href='#/project/{{project.Project.name}}'>{{project.Project.name}}</a></h3>
-      <p>{{project.Project.description}}</p>
+    <div  ng-repeat="githubProject in githubRepos" class="col-sm-3">
+      <h3><a href='#/project/{{githubProject.name}}'>{{githubProject.name}}</a></h3>
+      <p>
+      {{githubProject.description}}<br/>
+      Owner: {{githubProject.owner.login}}</p>
+      <a href="{{githubProject.html_url}}" target="_blank">Github</a>
     </div>
     
   </div>
