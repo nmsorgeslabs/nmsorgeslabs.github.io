@@ -1,40 +1,32 @@
 
 <div class="container">
-  <div class="jumbotron">
-    <h1>NMS org es Labs</h1>
-    <p>Github powered!</p> 
-  </div>
-  <div class="row">
-    <h2> Some ideas, fun and programming </h2>
-  </div>
-  <div class="row">
-    <div class="col-sm-3">
-      <h3>Team members</h3>
-      <p>Just me</p>
-
-    </div>
-    <div class="col-sm-3">
-      <h3>Latest commits</h3>
-      <p>TODO</p>
-    </div>
-    <div class="col-sm-3">
-      <h3>Latest news</h3>        
-      <p> Adding first ever Angular code to this page! </p>
-      <p> Just updated this page with Bootstrap simple template!</p>
-
-    </div>
-  </div>
 	<div class="jumbotron">
-	    <h1>Projects</h1>
-	    <p>All projets in NMS org es Labs</p> 
-	
+		<h1>NMS org es Labs</h1>
+		<p>Github powered!</p>
 	</div>
-    <div  ng-repeat="githubProject in githubRepos" class="col-sm-3">
-      <h3><a href='#/project/{{githubProject.name}}'>{{githubProject.name}}</a></h3>
-      <p>
-      {{githubProject.description}}<br/>
-      Owner: {{githubProject.owner.login}}</p>
-      <a href="{{githubProject.html_url}}" target="_blank">Github</a>
-    </div>
-    
-  </div>
+	<div class="row">
+		<div class="col-sm-12">
+			<h2>Some ideas, fun and programming</h2>
+			<p>Just a place to put everything together, set a proper page to
+				keep all organized, enjoy and use GitHub, and learn a lot with DIY
+				approach. DRY it to be funnier.</p>
+		</div>
+	</div>
+
+	<div class="jumbotron">
+		<h1>Projects</h1>
+		<p>All projets in NMS org es Labs</p>
+
+	</div>
+	<div ng-repeat="githubProject in githubRepos" class="col-sm-3">
+		<h3>
+			<a href='#/project/{{githubProject.name}}'>{{githubProject.name}}</a>
+		</h3>
+		<p>
+			{{githubProject.description}}<br /> Owner:
+			{{githubProject.owner.login}}
+		</p>
+		<a href="{{githubProject.html_url}}" target="_blank">Github</a>
+	</div>
+
+</div>

@@ -26,4 +26,9 @@ controller('nmsioController', function($scope,$http, $log) {
     $http.get("https://api.github.com/users/nmsorgeslabs/repos")
     .success(function(response) {$scope.githubRepos = response;});
     
+}).controller('nmsioRepoController',function($scope,$http,$log,$routeParams){
+	$scope.repoName = $routeParams.projectName;
+	
 });
+
+
